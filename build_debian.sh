@@ -224,6 +224,16 @@ else
     echo '[INFO] Skipping Install kubernetes'
 fi
 
+if [ "$INSTALL_CLOUD_INIT" == "y" ]
+then
+    ## Install cloud-init
+    echo '[INFO] Install cloud-init'
+    sudo LANG=C chroot $FILESYSTEM_ROOT apt-get -y install cloud-init
+    sudo cp files/image_config/cloud-init/10_datasource.cfg $FILESYSTEM_ROOT/etc/cloud/cloud.cfg.d/10_datasource.cfg
+else
+    echo '[INFO] Skipping Install cloud-init'
+fi
+
 ## Add docker config drop-in to specify dockerd command line
 sudo mkdir -p $FILESYSTEM_ROOT/etc/systemd/system/docker.service.d/
 ## Note: $_ means last argument of last command

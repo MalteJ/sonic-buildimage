@@ -145,3 +145,5 @@ KUBERNETES_VERSION = 1.18.0
 K8s_GCR_IO_PAUSE_VERSION = 3.2
 K8s_CNI_CALICO_VERSION = 3.12.0
 
+# INSTALL_CLOUD_INIT - installs the cloud-init package and configures an EC2 compatible data source
+INSTALL_CLOUD_INIT = n
