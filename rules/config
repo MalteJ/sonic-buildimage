@@ -84,7 +84,7 @@ ENABLE_ORGANIZATION_EXTENSIONS = y
 #SONIC_PROFILING_ON = y
 
 # ENABLE_SYSTEM_TELEMETRY - build docker-sonic-telemetry for system telemetry support
-ENABLE_SYSTEM_TELEMETRY = y
+ENABLE_SYSTEM_TELEMETRY = n
 
 # DEFAULT_KERNEL_PROCURE_METHOD - default method for obtaining kernel
 #   build:    build kernel from source
@@ -117,19 +117,19 @@ DEFAULT_VS_PREPARE_MEM = yes
 
 
 # ENABLE_ICCPD - build docker-iccpd for mclag support
-ENABLE_ICCPD = y
+ENABLE_ICCPD = n
 
 # ENABLE_SYSTEM_SFLOW - build docker-sonic-sflow for sFlow support
-ENABLE_SFLOW = y
+ENABLE_SFLOW = n
 
 # ENABLE_MGMT_FRAMEWORK - build docker-sonic-mgt-framework for CLI and REST server support
-ENABLE_MGMT_FRAMEWORK = y
+ENABLE_MGMT_FRAMEWORK = n
 
 # ENABLE_RESTAPI - build docker-sonic-restapi for configuring the switch using REST APIs
 ENABLE_RESTAPI = n
 
 # ENABLE_NAT - build docker-sonic-nat for nat support
-ENABLE_NAT = y
+ENABLE_NAT = n
 
 # INSTALL_KUBERNETES - if set to y kubernetes packages are installed to be able to
 # run as worker node in kubernetes cluster.
@@ -146,4 +146,4 @@ K8s_GCR_IO_PAUSE_VERSION = 3.2
 K8s_CNI_CALICO_VERSION = 3.12.0
 
 # INSTALL_CLOUD_INIT - installs the cloud-init package and configures an EC2 compatible data source
-INSTALL_CLOUD_INIT = n
+INSTALL_CLOUD_INIT = y
